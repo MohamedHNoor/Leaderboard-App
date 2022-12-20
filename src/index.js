@@ -6,32 +6,32 @@ const scoreLists = document.getElementById('score-lists');
 const lists = [
   {
     name: 'Mohamed',
-    score: 100
+    score: 100,
   },
   {
     name: 'Ahmed',
-    score: 10
+    score: 10,
   },
   {
     name: 'Ajaba',
-    score: 200
+    score: 200,
   },
   {
     name: 'Abdi',
-    score: 90
+    score: 90,
   },
   {
     name: 'Nima',
-    score: 1000
+    score: 1000,
   },
   {
     name: 'zunairah',
-    score: 2000
+    score: 2000,
   },
   {
     name: 'Fatima',
-    score: 3000
-  }
+    score: 3000,
+  },
 ];
 
 const displayList = () => {
