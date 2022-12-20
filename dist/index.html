@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Leaderboard-App</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header class="header">
+      <h1>Leaderboard</h1>
+    </header>
+
+    <main>
+      <!-- score section -->
+      <section class="score-section">
+        <header class="score-section-header">
+          <h2>Recent scores</h2>
+          <button type="submit" class="score-section-btn btn">Refresh</button>
+        </header>
+        <!-- score lists that are created dynamically -->
+        <div id="score-lists"></div>
+      </section>
+      <!-- form section -->
+      <section class="form-section">
+        <header class="form-section-header">
+          <h2>Add your score</h2>
+        </header>
+        <form action="" class="form">
+          <input type="text" id="name" placeholder="Your name" />
+          <input type="text" id="score" placeholder="Your score" />
+          <button type="submit" class="form-btn btn">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
