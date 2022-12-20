@@ -65,3 +65,7 @@ input {
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
 }
+
+.score-list:nth-child(even) {
+  background-color: rgb(222, 220, 220);
+}
