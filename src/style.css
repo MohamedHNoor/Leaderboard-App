@@ -1,3 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: aliceblue;
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  color: #555;
+  padding: 2rem;
+}
+
+.header {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 20rem 4rem 1rem;
+}
+
+main {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-section-header {
+  display: flex;
+  font-size: 14px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-section-header {
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
+
+input {
+  padding: 0.2rem;
+}
+
+.form-btn {
+  display: block;
+  align-self: flex-end;
+  padding: 0.2rem;
+}
+
+#score-lists {
+  border: 1px solid #000;
+}
+
+.score-list {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
 }
