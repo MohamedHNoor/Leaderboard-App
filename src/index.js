@@ -15,12 +15,12 @@ const postScore = async () => {
       method: 'POST',
       body: JSON.stringify({
         user: input.value,
-        score: score.value
+        score: score.value,
       }),
       headers: {
-        'Content-type': 'application/json'
-      }
-    }
+        'Content-type': 'application/json',
+      },
+    },
   );
   await response.json();
   input.value = '';
@@ -34,7 +34,7 @@ submitBtn.addEventListener('click', (e) => {
 
 const fetchScore = async () => {
   const data = await fetch(
-    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
   );
 
   const lists = await data.json();
