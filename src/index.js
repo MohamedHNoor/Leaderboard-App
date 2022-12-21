@@ -1,46 +1,63 @@
-// eslint-disable-next-line no-unused-vars
-import { style } from './style.css';
+import './style.css';
 
 const scoreLists = document.getElementById('score-lists');
+const input = document.getElementById('name');
+const score = document.getElementById('score');
+const refreshBtn = document.querySelector('.score-section-btn');
+const submitBtn = document.querySelector('.form-btn');
 
-const lists = [
-  {
-    name: 'Mohamed',
-    score: 100,
-  },
-  {
-    name: 'Ahmed',
-    score: 10,
-  },
-  {
-    name: 'Ajaba',
-    score: 200,
-  },
-  {
-    name: 'Abdi',
-    score: 90,
-  },
-  {
-    name: 'Nima',
-    score: 1000,
-  },
-  {
-    name: 'zunairah',
-    score: 2000,
-  },
-  {
-    name: 'Fatima',
-    score: 3000,
-  },
-];
+const gameID = 'YyIU2D42kI1ya6NGoIeJ';
 
-const displayList = () => {
+const postScore = async () => {
+  const response = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        user: input.value,
+        score: score.value
+      }),
+      headers: {
+        'Content-type': 'application/json'
+      }
+    }
+  );
+  const newList = await response.json();
+  console.log(newList);
+  input.value = '';
+  score.value = '';
+};
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  postScore();
+});
+
+const fetchScore = async () => {
+  const data = await fetch(
+    `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`
+  );
+
+  const lists = await data.json();
+  console.log(lists.result);
+  return lists;
+};
+
+const displayList = async () => {
+  const data = await fetchScore();
+  const lists = data.result;
   lists.forEach((item) => {
     const div = document.createElement('div');
     div.classList.add('score-list');
-    div.innerHTML = `<p>${item.name}: ${item.score}</p>`;
+    div.innerHTML = `<p>${item.user}: ${item.score}</p>`;
     scoreLists.appendChild(div);
   });
 };
 
-displayList();
+document.addEventListener('DOMContentLoaded', displayList);
+
+const refresh = () => {
+  window.location.reload();
+};
+
+refreshBtn.addEventListener('click', refresh);
