@@ -22,8 +22,7 @@ const postScore = async () => {
       }
     }
   );
-  const newList = await response.json();
-  console.log(newList);
+  await response.json();
   input.value = '';
   score.value = '';
 };
@@ -39,7 +38,6 @@ const fetchScore = async () => {
   );
 
   const lists = await data.json();
-  console.log(lists.result);
   return lists;
 };
 
