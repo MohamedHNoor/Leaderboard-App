@@ -6,4 +6,6 @@ const submitBtn = document.querySelector('.form-btn');
 
 const gameID = 'YyIU2D42kI1ya6NGoIeJ';
 
-export { scoreLists, input, score, refreshBtn, submitBtn, gameID };
+export {
+  scoreLists, input, score, refreshBtn, submitBtn, gameID,
+};
