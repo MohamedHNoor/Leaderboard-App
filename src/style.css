@@ -12,28 +12,74 @@ body {
   font-family: 'Rubik', sans-serif;
   line-height: 1;
   color: #555;
-  padding: 2rem;
 }
 
 .header {
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem 20rem 4rem 1rem;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  font-size: 3.5rem;
 }
 
 main {
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-  gap: 4rem;
   justify-content: center;
-  align-items: center;
 }
 
-.score-section-header {
+.container {
+  width: 100%;
   display: flex;
-  font-size: 14px;
-  gap: 1rem;
+  padding: 15px;
+  max-width: 800px;
+  gap: 15px;
+  justify-content: center;
+}
+
+.score-section {
+  flex: 1;
+}
+
+.score-section-headers {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  padding: 0 5px;
+}
+
+.score-section-headers h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#score-lists {
+  border: 2px solid #777;
+  list-style: none;
+  border-radius: 5px;
+}
+
+.score-list {
+  padding: 10px 15px;
+  font-size: 1.8rem;
+}
+
+.score-list:nth-child(even) {
+  background-color: rgb(222, 220, 220);
+}
+
+/* form section */
+.form-section {
+  flex: 1;
+  margin-left: 0;
+  padding: 10px;
 }
 
 .form-section-header {
@@ -43,29 +89,50 @@ main {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin: 0;
+  gap: 15px;
+}
+
+.form-title {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 input {
-  padding: 0.2rem;
+  width: 100%;
+  color: #777;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+}
+
+/* buttons */
+
+.score-section-btn {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: rgba(119, 119, 119, 0.8);
+}
+
+.score-section-btn:hover {
+  background-color: #777;
 }
 
 .form-btn {
-  display: block;
+  display: inline-block;
   align-self: flex-end;
-  padding: 0.2rem;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: rgba(119, 119, 119, 0.8);
 }
 
-#score-lists {
-  border: 1px solid #000;
-}
-
-.score-list {
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-}
-
-.score-list:nth-child(even) {
-  background-color: rgb(222, 220, 220);
+.form-btn:hover {
+  background-color: #777;
 }

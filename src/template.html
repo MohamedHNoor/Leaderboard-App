@@ -14,30 +14,30 @@
   </head>
   <body>
     <header class="header">
-      <h1>Leaderboard</h1>
+      <h1 class="header-logo">Leaderboard</h1>
     </header>
 
     <main>
-      <!-- score section -->
-      <section class="score-section">
-        <header class="score-section-header">
-          <h2>Recent scores</h2>
-          <button type="submit" class="score-section-btn btn">Refresh</button>
-        </header>
-        <!-- score lists that are created dynamically -->
-        <div id="score-lists"></div>
-      </section>
-      <!-- form section -->
-      <section class="form-section">
-        <header class="form-section-header">
-          <h2>Add your score</h2>
-        </header>
-        <form action="" class="form">
-          <input type="text" id="name" placeholder="Your name" />
-          <input type="text" id="score" placeholder="Your score" />
-          <button type="submit" class="form-btn btn">Submit</button>
-        </form>
-      </section>
+      <div class="container">
+        <!-- score section -->
+        <section class="score-section">
+          <header class="score-section-headers">
+            <h2>Recent scores</h2>
+            <button type="submit" class="score-section-btn btn">Refresh</button>
+          </header>
+          <!-- score lists that are created dynamically -->
+          <ul id="score-lists"></ul>
+        </section>
+        <!-- form section -->
+        <section class="form-section">
+          <form action="" class="form">
+            <h3 class="form-title">Add your score</h3>
+            <input type="text" id="name" placeholder="Your name" />
+            <input type="text" id="score" placeholder="Your score" />
+            <button type="submit" class="form-btn btn">Submit</button>
+          </form>
+        </section>
+      </div>
     </main>
   </body>
 </html>
